@@ -1,0 +1,73 @@
+dataset,expected,goal
+dataset1_logic_course,valid,True
+dataset1_logic_course,valid,False --> A
+dataset1_logic_course,valid,A --> A
+dataset1_logic_course,valid,A & B --> A
+dataset1_logic_course,valid,A & B --> B
+dataset1_logic_course,valid,A --> A | B
+dataset1_logic_course,valid,B --> A | B
+dataset1_logic_course,valid,A & B --> B & A
+dataset1_logic_course,valid,A | B --> B | A
+dataset1_logic_course,valid,A --> (B --> A)
+dataset1_logic_course,valid,(A --> B) --> ((B --> C) --> (A --> C))
+dataset1_logic_course,valid,(A --> (B --> C)) --> (B --> (A --> C))
+dataset1_logic_course,valid,((A --> B) & (B --> C)) --> (A --> C)
+dataset1_logic_course,valid,(A --> B) --> (~ B --> ~ A)
+dataset1_logic_course,valid,~~ A --> A
+dataset1_logic_course,valid,A --> ~~ A
+dataset1_logic_course,valid,~(A | B) --> (~ A & ~ B)
+dataset1_logic_course,valid,(~ A & ~ B) --> ~(A | B)
+dataset1_logic_course,valid,~(A & B) --> (~ A | ~ B)
+dataset1_logic_course,valid,((A --> B) & (B --> A)) --> (A = B)
+dataset1_logic_course,valid,(ALL x. P x) --> P a
+dataset1_logic_course,valid,P a --> (EX x. P x)
+dataset1_logic_course,valid,(ALL x. P x --> Q x) --> ((ALL x. P x) --> (ALL x. Q x))
+dataset1_logic_course,valid,(EX x. P x & Q x) --> (EX x. P x)
+dataset1_logic_course,valid,(ALL x. P x) --> (EX x. P x)
+dataset2_isabelle_main_library,valid,rev (rev xs) = xs
+dataset2_isabelle_main_library,valid,length (rev xs) = length xs
+dataset2_isabelle_main_library,valid,length (xs @ ys) = length xs + length ys
+dataset2_isabelle_main_library,valid,map f (xs @ ys) = map f xs @ map f ys
+dataset2_isabelle_main_library,valid,rev (xs @ ys) = rev ys @ rev xs
+dataset2_isabelle_main_library,valid,xs @ [] = xs
+dataset2_isabelle_main_library,valid,[] @ xs = xs
+dataset2_isabelle_main_library,valid,(xs @ ys) @ zs = xs @ (ys @ zs)
+dataset2_isabelle_main_library,valid,length (map f xs) = length xs
+dataset2_isabelle_main_library,valid,map f [] = []
+dataset2_isabelle_main_library,valid,rev [] = []
+dataset2_isabelle_main_library,valid,rev [x] = [x]
+dataset2_isabelle_main_library,valid,hd (x # xs) = x
+dataset2_isabelle_main_library,valid,tl (x # xs) = xs
+dataset2_isabelle_main_library,valid,set (rev xs) = set xs
+dataset2_isabelle_main_library,valid,filter P (xs @ ys) = filter P xs @ filter P ys
+dataset2_isabelle_main_library,valid,rev (map f xs) = map f (rev xs)
+dataset2_isabelle_main_library,valid,(n::nat) + 0 = n
+dataset2_isabelle_main_library,valid,0 + (n::nat) = n
+dataset2_isabelle_main_library,valid,(n::nat) * 0 = 0
+dataset2_isabelle_main_library,valid,0 * (n::nat) = 0
+dataset2_isabelle_main_library,valid,(n::nat) <= n
+dataset2_isabelle_main_library,valid,(n::nat) < n + 1
+dataset2_isabelle_main_library,valid,(n::nat) + m = m + n
+dataset3_robustness_negative_controls,valid,(if b then x else x) = x
+dataset3_robustness_negative_controls,valid,(case Some x of None => y | Some z => z) = x
+dataset3_robustness_negative_controls,valid,(case None of None => y | Some z => z) = y
+dataset3_robustness_negative_controls,valid,"fst (a, b) = a"
+dataset3_robustness_negative_controls,valid,"snd (a, b) = b"
+dataset3_robustness_negative_controls,valid,(if P then True else True)
+dataset3_robustness_negative_controls,valid,take 0 xs = []
+dataset3_robustness_negative_controls,valid,drop 0 xs = xs
+dataset3_robustness_negative_controls,valid,take (length xs) xs = xs
+dataset3_robustness_negative_controls,valid,drop (length xs) xs = []
+dataset3_robustness_negative_controls,valid,set (xs @ ys) = set xs Un set ys
+dataset3_robustness_negative_controls,valid,map g (map f xs) = map (g o f) xs
+dataset3_robustness_negative_controls,invalid,A --> B
+dataset3_robustness_negative_controls,invalid,A | B --> A & B
+dataset3_robustness_negative_controls,invalid,A & B --> C
+dataset3_robustness_negative_controls,invalid,~ A --> A
+dataset3_robustness_negative_controls,invalid,A --> ~ A
+dataset3_robustness_negative_controls,invalid,(A --> B) --> (B --> A)
+dataset3_robustness_negative_controls,invalid,rev xs = xs
+dataset3_robustness_negative_controls,invalid,length xs = 0 --> xs = [x]
+dataset3_robustness_negative_controls,invalid,(n::nat) < n
+dataset3_robustness_negative_controls,invalid,(n::nat) + 1 = n
+dataset3_robustness_negative_controls,invalid,length (xs @ ys) = length xs

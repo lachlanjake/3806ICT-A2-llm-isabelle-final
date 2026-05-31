@@ -1,0 +1,23 @@
+(if b then x else x) = x
+(case Some x of None => y | Some z => z) = x
+(case None of None => y | Some z => z) = y
+fst (a, b) = a
+snd (a, b) = b
+(if P then True else True)
+take 0 xs = []
+drop 0 xs = xs
+take (length xs) xs = xs
+drop (length xs) xs = []
+set (xs @ ys) = set xs Un set ys
+map g (map f xs) = map (g o f) xs
+A --> B
+A | B --> A & B
+A & B --> C
+~ A --> A
+A --> ~ A
+(A --> B) --> (B --> A)
+rev xs = xs
+length xs = 0 --> xs = [x]
+(n::nat) < n
+(n::nat) + 1 = n
+length (xs @ ys) = length xs

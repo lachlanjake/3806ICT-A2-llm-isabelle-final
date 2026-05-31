@@ -1,0 +1,24 @@
+rev (rev xs) = xs
+length (rev xs) = length xs
+length (xs @ ys) = length xs + length ys
+map f (xs @ ys) = map f xs @ map f ys
+rev (xs @ ys) = rev ys @ rev xs
+xs @ [] = xs
+[] @ xs = xs
+(xs @ ys) @ zs = xs @ (ys @ zs)
+length (map f xs) = length xs
+map f [] = []
+rev [] = []
+rev [x] = [x]
+hd (x # xs) = x
+tl (x # xs) = xs
+set (rev xs) = set xs
+filter P (xs @ ys) = filter P xs @ filter P ys
+rev (map f xs) = map f (rev xs)
+(n::nat) + 0 = n
+0 + (n::nat) = n
+(n::nat) * 0 = 0
+0 * (n::nat) = 0
+(n::nat) <= n
+(n::nat) < n + 1
+(n::nat) + m = m + n
