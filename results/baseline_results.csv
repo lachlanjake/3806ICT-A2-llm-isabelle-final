@@ -1,0 +1,73 @@
+system,dataset,expected,goal,exit_code,actual,correct_behaviour,runtime_sec
+baseline,dataset1_logic_course,valid,True,1,failed_or_unproved,no,9.589
+baseline,dataset1_logic_course,valid,False --> A,1,failed_or_unproved,no,8.739
+baseline,dataset1_logic_course,valid,A --> A,1,failed_or_unproved,no,9.203
+baseline,dataset1_logic_course,valid,A & B --> A,1,failed_or_unproved,no,10.632
+baseline,dataset1_logic_course,valid,A & B --> B,1,failed_or_unproved,no,10.824
+baseline,dataset1_logic_course,valid,A --> A | B,1,failed_or_unproved,no,10.927
+baseline,dataset1_logic_course,valid,B --> A | B,1,failed_or_unproved,no,11.738
+baseline,dataset1_logic_course,valid,A & B --> B & A,1,failed_or_unproved,no,11.595
+baseline,dataset1_logic_course,valid,A | B --> B | A,1,failed_or_unproved,no,10.775
+baseline,dataset1_logic_course,valid,A --> (B --> A),1,failed_or_unproved,no,10.754
+baseline,dataset1_logic_course,valid,(A --> B) --> ((B --> C) --> (A --> C)),1,failed_or_unproved,no,12.234
+baseline,dataset1_logic_course,valid,(A --> (B --> C)) --> (B --> (A --> C)),1,failed_or_unproved,no,65.337
+baseline,dataset1_logic_course,valid,((A --> B) & (B --> C)) --> (A --> C),1,failed_or_unproved,no,12.19
+baseline,dataset1_logic_course,valid,(A --> B) --> (~ B --> ~ A),1,failed_or_unproved,no,11.823
+baseline,dataset1_logic_course,valid,~~ A --> A,1,failed_or_unproved,no,65.663
+baseline,dataset1_logic_course,valid,A --> ~~ A,1,failed_or_unproved,no,10.898
+baseline,dataset1_logic_course,valid,~(A | B) --> (~ A & ~ B),1,failed_or_unproved,no,11.166
+baseline,dataset1_logic_course,valid,(~ A & ~ B) --> ~(A | B),1,failed_or_unproved,no,12.239
+baseline,dataset1_logic_course,valid,~(A & B) --> (~ A | ~ B),1,failed_or_unproved,no,11.644
+baseline,dataset1_logic_course,valid,((A --> B) & (B --> A)) --> (A = B),1,failed_or_unproved,no,65.46
+baseline,dataset1_logic_course,valid,(ALL x. P x) --> P a,1,failed_or_unproved,no,10.697
+baseline,dataset1_logic_course,valid,P a --> (EX x. P x),1,failed_or_unproved,no,12.207
+baseline,dataset1_logic_course,valid,(ALL x. P x --> Q x) --> ((ALL x. P x) --> (ALL x. Q x)),1,failed_or_unproved,no,65.253
+baseline,dataset1_logic_course,valid,(EX x. P x & Q x) --> (EX x. P x),1,failed_or_unproved,no,11.778
+baseline,dataset1_logic_course,valid,(ALL x. P x) --> (EX x. P x),1,failed_or_unproved,no,10.677
+baseline,dataset2_isabelle_main_library,valid,rev (rev xs) = xs,1,failed_or_unproved,no,10.733
+baseline,dataset2_isabelle_main_library,valid,length (rev xs) = length xs,1,failed_or_unproved,no,12.266
+baseline,dataset2_isabelle_main_library,valid,length (xs @ ys) = length xs + length ys,1,failed_or_unproved,no,65.445
+baseline,dataset2_isabelle_main_library,valid,map f (xs @ ys) = map f xs @ map f ys,1,failed_or_unproved,no,65.478
+baseline,dataset2_isabelle_main_library,valid,rev (xs @ ys) = rev ys @ rev xs,1,failed_or_unproved,no,13.309
+baseline,dataset2_isabelle_main_library,valid,xs @ [] = xs,1,failed_or_unproved,no,9.296
+baseline,dataset2_isabelle_main_library,valid,[] @ xs = xs,1,failed_or_unproved,no,11.465
+baseline,dataset2_isabelle_main_library,valid,(xs @ ys) @ zs = xs @ (ys @ zs),1,failed_or_unproved,no,14.259
+baseline,dataset2_isabelle_main_library,valid,length (map f xs) = length xs,1,failed_or_unproved,no,17.263
+baseline,dataset2_isabelle_main_library,valid,map f [] = [],1,failed_or_unproved,no,9.715
+baseline,dataset2_isabelle_main_library,valid,rev [] = [],1,failed_or_unproved,no,9.268
+baseline,dataset2_isabelle_main_library,valid,rev [x] = [x],1,failed_or_unproved,no,11.302
+baseline,dataset2_isabelle_main_library,valid,hd (x # xs) = x,1,failed_or_unproved,no,11.815
+baseline,dataset2_isabelle_main_library,valid,tl (x # xs) = xs,1,failed_or_unproved,no,13.68
+baseline,dataset2_isabelle_main_library,valid,set (rev xs) = set xs,1,failed_or_unproved,no,14.273
+baseline,dataset2_isabelle_main_library,valid,filter P (xs @ ys) = filter P xs @ filter P ys,1,failed_or_unproved,no,65.472
+baseline,dataset2_isabelle_main_library,valid,rev (map f xs) = map f (rev xs),1,failed_or_unproved,no,65.273
+baseline,dataset2_isabelle_main_library,valid,(n::nat) + 0 = n,1,failed_or_unproved,no,10.666
+baseline,dataset2_isabelle_main_library,valid,0 + (n::nat) = n,1,failed_or_unproved,no,11.266
+baseline,dataset2_isabelle_main_library,valid,(n::nat) * 0 = 0,1,failed_or_unproved,no,12.747
+baseline,dataset2_isabelle_main_library,valid,0 * (n::nat) = 0,1,failed_or_unproved,no,12.295
+baseline,dataset2_isabelle_main_library,valid,(n::nat) <= n,1,failed_or_unproved,no,10.739
+baseline,dataset2_isabelle_main_library,valid,(n::nat) < n + 1,1,failed_or_unproved,no,11.354
+baseline,dataset2_isabelle_main_library,valid,(n::nat) + m = m + n,1,failed_or_unproved,no,11.299
+baseline,dataset3_robustness_negative_controls,valid,(if b then x else x) = x,1,failed_or_unproved,no,12.281
+baseline,dataset3_robustness_negative_controls,valid,(case Some x of None => y | Some z => z) = x,1,failed_or_unproved,no,65.493
+baseline,dataset3_robustness_negative_controls,valid,(case None of None => y | Some z => z) = y,1,failed_or_unproved,no,11.759
+baseline,dataset3_robustness_negative_controls,valid,"fst (a, b) = a",1,failed_or_unproved,no,10.643
+baseline,dataset3_robustness_negative_controls,valid,"snd (a, b) = b",1,failed_or_unproved,no,10.135
+baseline,dataset3_robustness_negative_controls,valid,(if P then True else True),1,failed_or_unproved,no,10.697
+baseline,dataset3_robustness_negative_controls,valid,take 0 xs = [],1,failed_or_unproved,no,12.631
+baseline,dataset3_robustness_negative_controls,valid,drop 0 xs = xs,1,failed_or_unproved,no,9.686
+baseline,dataset3_robustness_negative_controls,valid,take (length xs) xs = xs,1,failed_or_unproved,no,65.489
+baseline,dataset3_robustness_negative_controls,valid,drop (length xs) xs = [],1,failed_or_unproved,no,11.614
+baseline,dataset3_robustness_negative_controls,valid,set (xs @ ys) = set xs Un set ys,1,failed_or_unproved,no,12.189
+baseline,dataset3_robustness_negative_controls,valid,map g (map f xs) = map (g o f) xs,1,failed_or_unproved,no,65.405
+baseline,dataset3_robustness_negative_controls,invalid,A --> B,1,failed_or_unproved,yes,65.308
+baseline,dataset3_robustness_negative_controls,invalid,A | B --> A & B,1,failed_or_unproved,yes,10.674
+baseline,dataset3_robustness_negative_controls,invalid,A & B --> C,1,failed_or_unproved,yes,11.254
+baseline,dataset3_robustness_negative_controls,invalid,~ A --> A,1,failed_or_unproved,yes,10.71
+baseline,dataset3_robustness_negative_controls,invalid,A --> ~ A,1,failed_or_unproved,yes,9.332
+baseline,dataset3_robustness_negative_controls,invalid,(A --> B) --> (B --> A),1,failed_or_unproved,yes,11.294
+baseline,dataset3_robustness_negative_controls,invalid,rev xs = xs,1,failed_or_unproved,yes,10.626
+baseline,dataset3_robustness_negative_controls,invalid,length xs = 0 --> xs = [x],1,failed_or_unproved,yes,13.21
+baseline,dataset3_robustness_negative_controls,invalid,(n::nat) < n,1,failed_or_unproved,yes,10.832
+baseline,dataset3_robustness_negative_controls,invalid,(n::nat) + 1 = n,1,failed_or_unproved,yes,66.297
+baseline,dataset3_robustness_negative_controls,invalid,length (xs @ ys) = length xs,1,failed_or_unproved,yes,11.765

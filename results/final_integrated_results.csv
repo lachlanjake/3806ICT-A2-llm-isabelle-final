@@ -1,0 +1,73 @@
+system,dataset,expected,goal,exit_code,actual,correct_behaviour,runtime_sec
+final_integrated,dataset1_logic_course,valid,True,0,proved,yes,17.428
+final_integrated,dataset1_logic_course,valid,False --> A,0,proved,yes,16.766
+final_integrated,dataset1_logic_course,valid,A --> A,0,proved,yes,16.758
+final_integrated,dataset1_logic_course,valid,A & B --> A,0,proved,yes,16.837
+final_integrated,dataset1_logic_course,valid,A & B --> B,0,proved,yes,16.727
+final_integrated,dataset1_logic_course,valid,A --> A | B,0,proved,yes,16.78
+final_integrated,dataset1_logic_course,valid,B --> A | B,0,proved,yes,16.767
+final_integrated,dataset1_logic_course,valid,A & B --> B & A,0,proved,yes,16.758
+final_integrated,dataset1_logic_course,valid,A | B --> B | A,0,proved,yes,16.733
+final_integrated,dataset1_logic_course,valid,A --> (B --> A),0,proved,yes,16.751
+final_integrated,dataset1_logic_course,valid,(A --> B) --> ((B --> C) --> (A --> C)),0,proved,yes,16.812
+final_integrated,dataset1_logic_course,valid,(A --> (B --> C)) --> (B --> (A --> C)),0,proved,yes,16.781
+final_integrated,dataset1_logic_course,valid,((A --> B) & (B --> C)) --> (A --> C),0,proved,yes,16.74
+final_integrated,dataset1_logic_course,valid,(A --> B) --> (~ B --> ~ A),0,proved,yes,19.214
+final_integrated,dataset1_logic_course,valid,~~ A --> A,0,proved,yes,16.771
+final_integrated,dataset1_logic_course,valid,A --> ~~ A,0,proved,yes,16.774
+final_integrated,dataset1_logic_course,valid,~(A | B) --> (~ A & ~ B),0,proved,yes,16.748
+final_integrated,dataset1_logic_course,valid,(~ A & ~ B) --> ~(A | B),0,proved,yes,16.889
+final_integrated,dataset1_logic_course,valid,~(A & B) --> (~ A | ~ B),0,proved,yes,16.989
+final_integrated,dataset1_logic_course,valid,((A --> B) & (B --> A)) --> (A = B),0,proved,yes,19.929
+final_integrated,dataset1_logic_course,valid,(ALL x. P x) --> P a,0,proved,yes,17.073
+final_integrated,dataset1_logic_course,valid,P a --> (EX x. P x),0,proved,yes,19.49
+final_integrated,dataset1_logic_course,valid,(ALL x. P x --> Q x) --> ((ALL x. P x) --> (ALL x. Q x)),0,proved,yes,17.053
+final_integrated,dataset1_logic_course,valid,(EX x. P x & Q x) --> (EX x. P x),0,proved,yes,19.613
+final_integrated,dataset1_logic_course,valid,(ALL x. P x) --> (EX x. P x),0,proved,yes,17.132
+final_integrated,dataset2_isabelle_main_library,valid,rev (rev xs) = xs,0,proved,yes,17.116
+final_integrated,dataset2_isabelle_main_library,valid,length (rev xs) = length xs,0,proved,yes,17.01
+final_integrated,dataset2_isabelle_main_library,valid,length (xs @ ys) = length xs + length ys,0,proved,yes,17.018
+final_integrated,dataset2_isabelle_main_library,valid,map f (xs @ ys) = map f xs @ map f ys,0,proved,yes,17.095
+final_integrated,dataset2_isabelle_main_library,valid,rev (xs @ ys) = rev ys @ rev xs,0,proved,yes,17.022
+final_integrated,dataset2_isabelle_main_library,valid,xs @ [] = xs,0,proved,yes,17.048
+final_integrated,dataset2_isabelle_main_library,valid,[] @ xs = xs,0,proved,yes,16.981
+final_integrated,dataset2_isabelle_main_library,valid,(xs @ ys) @ zs = xs @ (ys @ zs),0,proved,yes,16.998
+final_integrated,dataset2_isabelle_main_library,valid,length (map f xs) = length xs,0,proved,yes,16.995
+final_integrated,dataset2_isabelle_main_library,valid,map f [] = [],0,proved,yes,16.913
+final_integrated,dataset2_isabelle_main_library,valid,rev [] = [],0,proved,yes,16.78
+final_integrated,dataset2_isabelle_main_library,valid,rev [x] = [x],0,proved,yes,16.824
+final_integrated,dataset2_isabelle_main_library,valid,hd (x # xs) = x,0,proved,yes,16.811
+final_integrated,dataset2_isabelle_main_library,valid,tl (x # xs) = xs,0,proved,yes,16.915
+final_integrated,dataset2_isabelle_main_library,valid,set (rev xs) = set xs,0,proved,yes,16.878
+final_integrated,dataset2_isabelle_main_library,valid,filter P (xs @ ys) = filter P xs @ filter P ys,0,proved,yes,16.765
+final_integrated,dataset2_isabelle_main_library,valid,rev (map f xs) = map f (rev xs),0,proved,yes,40.305
+final_integrated,dataset2_isabelle_main_library,valid,(n::nat) + 0 = n,0,proved,yes,16.814
+final_integrated,dataset2_isabelle_main_library,valid,0 + (n::nat) = n,0,proved,yes,16.814
+final_integrated,dataset2_isabelle_main_library,valid,(n::nat) * 0 = 0,0,proved,yes,16.857
+final_integrated,dataset2_isabelle_main_library,valid,0 * (n::nat) = 0,0,proved,yes,16.758
+final_integrated,dataset2_isabelle_main_library,valid,(n::nat) <= n,0,proved,yes,16.843
+final_integrated,dataset2_isabelle_main_library,valid,(n::nat) < n + 1,0,proved,yes,16.831
+final_integrated,dataset2_isabelle_main_library,valid,(n::nat) + m = m + n,0,proved,yes,16.846
+final_integrated,dataset3_robustness_negative_controls,valid,(if b then x else x) = x,0,proved,yes,16.809
+final_integrated,dataset3_robustness_negative_controls,valid,(case Some x of None => y | Some z => z) = x,0,proved,yes,19.37
+final_integrated,dataset3_robustness_negative_controls,valid,(case None of None => y | Some z => z) = y,0,proved,yes,16.797
+final_integrated,dataset3_robustness_negative_controls,valid,"fst (a, b) = a",0,proved,yes,16.799
+final_integrated,dataset3_robustness_negative_controls,valid,"snd (a, b) = b",0,proved,yes,16.759
+final_integrated,dataset3_robustness_negative_controls,valid,(if P then True else True),0,proved,yes,16.816
+final_integrated,dataset3_robustness_negative_controls,valid,take 0 xs = [],0,proved,yes,16.79
+final_integrated,dataset3_robustness_negative_controls,valid,drop 0 xs = xs,0,proved,yes,16.762
+final_integrated,dataset3_robustness_negative_controls,valid,take (length xs) xs = xs,0,proved,yes,16.897
+final_integrated,dataset3_robustness_negative_controls,valid,drop (length xs) xs = [],0,proved,yes,16.888
+final_integrated,dataset3_robustness_negative_controls,valid,set (xs @ ys) = set xs Un set ys,0,proved,yes,16.817
+final_integrated,dataset3_robustness_negative_controls,valid,map g (map f xs) = map (g o f) xs,0,proved,yes,16.815
+final_integrated,dataset3_robustness_negative_controls,invalid,A --> B,1,failed_or_unproved,yes,79.034
+final_integrated,dataset3_robustness_negative_controls,invalid,A | B --> A & B,1,failed_or_unproved,yes,74.699
+final_integrated,dataset3_robustness_negative_controls,invalid,A & B --> C,1,failed_or_unproved,yes,74.191
+final_integrated,dataset3_robustness_negative_controls,invalid,~ A --> A,1,failed_or_unproved,yes,74.265
+final_integrated,dataset3_robustness_negative_controls,invalid,A --> ~ A,1,failed_or_unproved,yes,73.954
+final_integrated,dataset3_robustness_negative_controls,invalid,(A --> B) --> (B --> A),1,failed_or_unproved,yes,64.032
+final_integrated,dataset3_robustness_negative_controls,invalid,rev xs = xs,124,failed_or_unproved,yes,90.006
+final_integrated,dataset3_robustness_negative_controls,invalid,length xs = 0 --> xs = [x],1,failed_or_unproved,yes,63.707
+final_integrated,dataset3_robustness_negative_controls,invalid,(n::nat) < n,1,failed_or_unproved,yes,75.821
+final_integrated,dataset3_robustness_negative_controls,invalid,(n::nat) + 1 = n,124,failed_or_unproved,yes,90.008
+final_integrated,dataset3_robustness_negative_controls,invalid,length (xs @ ys) = length xs,1,failed_or_unproved,yes,71.98

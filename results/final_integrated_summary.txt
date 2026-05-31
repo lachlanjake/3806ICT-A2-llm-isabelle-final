@@ -1,0 +1,14 @@
+SUMMARY FOR final_integrated
+============================================================
+Total goals: 72
+Proved: 61
+Correct behaviour: 72/72 (100.00%)
+Valid goals proved: 61/61
+Invalid goals correctly rejected: 11/11
+Average runtime: 26.355 sec
+
+PER DATASET
+------------------------------------------------------------
+dataset1_logic_course: proved=25/25, correct=25/25, avg_runtime=17.293s
+dataset2_isabelle_main_library: proved=24/24, correct=24/24, avg_runtime=17.885s
+dataset3_robustness_negative_controls: proved=12/23, correct=23/23, avg_runtime=45.044s
