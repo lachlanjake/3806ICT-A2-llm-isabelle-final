@@ -1,0 +1,1418 @@
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: True
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "True"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.428
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: False --> A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "False --> A"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.766
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A --> A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A --> A"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.758
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A & B --> A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A & B --> A"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.837
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A & B --> B
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A & B --> B"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.727
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A --> A | B
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A --> A | B"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.78
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: B --> A | B
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "B --> A | B"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.767
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A & B --> B & A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A & B --> B & A"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.758
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A | B --> B | A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A | B --> B | A"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.733
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A --> (B --> A)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A --> (B --> A)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.751
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (A --> B) --> ((B --> C) --> (A --> C))
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(A --> B) --> ((B --> C) --> (A --> C))"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.812
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (A --> (B --> C)) --> (B --> (A --> C))
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(A --> (B --> C)) --> (B --> (A --> C))"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.781
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: ((A --> B) & (B --> C)) --> (A --> C)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "((A --> B) & (B --> C)) --> (A --> C)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.74
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (A --> B) --> (~ B --> ~ A)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by auto
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by auto
+lemma "(A --> B) --> (~ B --> ~ A)"
+by auto
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 19.214
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: ~~ A --> A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "~~ A --> A"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.771
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: A --> ~~ A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "A --> ~~ A"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.774
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: ~(A | B) --> (~ A & ~ B)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "~(A | B) --> (~ A & ~ B)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.748
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (~ A & ~ B) --> ~(A | B)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(~ A & ~ B) --> ~(A | B)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.889
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: ~(A & B) --> (~ A | ~ B)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "~(A & B) --> (~ A | ~ B)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.989
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: ((A --> B) & (B --> A)) --> (A = B)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by auto
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by auto
+lemma "((A --> B) & (B --> A)) --> (A = B)"
+by auto
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 19.929
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (ALL x. P x) --> P a
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(ALL x. P x) --> P a"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.073
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: P a --> (EX x. P x)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by auto
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by auto
+lemma "P a --> (EX x. P x)"
+by auto
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 19.49
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (ALL x. P x --> Q x) --> ((ALL x. P x) --> (ALL x. Q x))
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(ALL x. P x --> Q x) --> ((ALL x. P x) --> (ALL x. Q x))"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.053
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (EX x. P x & Q x) --> (EX x. P x)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by auto
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by auto
+lemma "(EX x. P x & Q x) --> (EX x. P x)"
+by auto
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 19.613
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset1_logic_course
+EXPECTED: valid
+GOAL: (ALL x. P x) --> (EX x. P x)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(ALL x. P x) --> (EX x. P x)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.132
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: rev (rev xs) = xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "rev (rev xs) = xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.116
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: length (rev xs) = length xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "length (rev xs) = length xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.01
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: length (xs @ ys) = length xs + length ys
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "length (xs @ ys) = length xs + length ys"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.018
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: map f (xs @ ys) = map f xs @ map f ys
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "map f (xs @ ys) = map f xs @ map f ys"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.095
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: rev (xs @ ys) = rev ys @ rev xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "rev (xs @ ys) = rev ys @ rev xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.022
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: xs @ [] = xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "xs @ [] = xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 17.048
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: [] @ xs = xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "[] @ xs = xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.981
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: (xs @ ys) @ zs = xs @ (ys @ zs)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(xs @ ys) @ zs = xs @ (ys @ zs)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.998
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: length (map f xs) = length xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "length (map f xs) = length xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.995
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: map f [] = []
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "map f [] = []"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.913
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: rev [] = []
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "rev [] = []"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.78
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: rev [x] = [x]
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "rev [x] = [x]"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.824
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: hd (x # xs) = x
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "hd (x # xs) = x"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.811
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: tl (x # xs) = xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "tl (x # xs) = xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.915
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: set (rev xs) = set xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "set (rev xs) = set xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.878
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: filter P (xs @ ys) = filter P xs @ filter P ys
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "filter P (xs @ ys) = filter P xs @ filter P ys"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.765
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: rev (map f xs) = map f (rev xs)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by (simp add: rev_map)
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by (simp add: rev_map)
+lemma "rev (map f xs) = map f (rev xs)"
+by (simp add: rev_map)
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 40.305
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: (n::nat) + 0 = n
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(n::nat) + 0 = n"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.814
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: 0 + (n::nat) = n
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "0 + (n::nat) = n"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.814
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: (n::nat) * 0 = 0
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(n::nat) * 0 = 0"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.857
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: 0 * (n::nat) = 0
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "0 * (n::nat) = 0"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.758
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: (n::nat) <= n
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(n::nat) <= n"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.843
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: (n::nat) < n + 1
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(n::nat) < n + 1"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.831
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset2_isabelle_main_library
+EXPECTED: valid
+GOAL: (n::nat) + m = m + n
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(n::nat) + m = m + n"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.846
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: (if b then x else x) = x
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(if b then x else x) = x"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.809
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: (case Some x of None => y | Some z => z) = x
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(case Some x of None => y | Some z => z) = x"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 19.37
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: (case None of None => y | Some z => z) = y
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(case None of None => y | Some z => z) = y"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.797
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: fst (a, b) = a
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "fst (a, b) = a"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.799
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: snd (a, b) = b
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "snd (a, b) = b"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.759
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: (if P then True else True)
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "(if P then True else True)"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.816
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: take 0 xs = []
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "take 0 xs = []"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.79
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: drop 0 xs = xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "drop 0 xs = xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.762
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: take (length xs) xs = xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "take (length xs) xs = xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.897
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: drop (length xs) xs = []
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "drop (length xs) xs = []"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.888
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: set (xs @ ys) = set xs Un set ys
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "set (xs @ ys) = set xs Un set ys"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.817
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: valid
+GOAL: map g (map f xs) = map (g o f) xs
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[integration] Part 1 prover returned proof: by simp
+[integration] Isabelle verification accepted the final proof.
+[planner] Direct prover fast path succeeded: by simp
+lemma "map g (map f xs) = map (g o f) xs"
+by simp
+
+ACTUAL: proved
+CORRECT: yes
+RUNTIME_SEC: 16.815
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: A --> B
+
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 24837 is closed
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+[fill] State block (length=0):
+  (empty or whitespace only)
+
+▶ Goal: A --> B
+Models: qwen2.5:3b | Beam=3 | MaxDepth=6 | Timeout=5s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by auto, llm:by blast, llm:by (metis not_imp_swap), llm:by (rule classical), llm:by linarith]
+  finish × [llm] by simp  (1425ms)
+[fill] Fill made no progress. Escalating to repair stage 1...
+lemma "A --> B"
+proof -
+  have "A = B" sorry
+  moreover have "B = C" using this  sorry
+  ultimately show ?thesis using this  sorry
+    sorry
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 79.034
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: A | B --> A & B
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+lemma "A | B --> A & B"
+proof -
+  have "A | B = True" by auto
+  moreover have "True = A & B" by blast
+  ultimately show ?thesis by simp
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 74.699
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: A & B --> C
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+lemma "A & B --> C"
+proof -
+  have "A & B = A" by simp
+  moreover have "A = C" using `A & B = A` `B = C` by blast
+  ultimately show ?thesis by simp
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 74.191
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: ~ A --> A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+lemma "~ A --> A"
+proof -
+  have f1: "A = B" by simp
+  have f2: "B = C" using f1 by simp
+  also have "... = D" by simp
+  finally show ?thesis using f2 by simp
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 74.265
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: A --> ~ A
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+lemma "A --> ~ A"
+proof -
+  have "A = False" by (simp add: iff_disj_commute)
+  moreover have "~ A" by simp
+  ultimately show ?thesis by blast
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 73.954
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: (A --> B) --> (B --> A)
+
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 29465 is closed
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+[fill] State block (length=0):
+  (empty or whitespace only)
+
+▶ Goal: (A --> B) --> (B --> A)
+Models: qwen2.5:3b | Beam=3 | MaxDepth=6 | Timeout=8s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by auto, llm:by blast, llm:by (metis impI), llm:by (rule impI), llm:by metis]
+  finish × [llm] by simp  (1280ms)
+  finish × [llm] by auto  (2112ms)
+[fill] Fill made no progress. Escalating to repair stage 1...
+[fill] Skipping fill for hole @6228fd4585d35827; running repairs at stage 1
+lemma "(A --> B) --> (B --> A)"
+proof -
+  have "A = B" sorry
+  moreover have "B = C" using this by simp
+  ultimately show ?thesis by blast
+    sorry
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 64.032
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: rev xs = xs
+
+
+TIMEOUT: subprocess exceeded 90 seconds
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 90.006
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: length xs = 0 --> xs = [x]
+
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 30739 is closed
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+[fill] State block (length=0):
+  (empty or whitespace only)
+
+▶ Goal: length xs = 0 --> xs = [x]
+Models: qwen2.5:3b | Beam=3 | MaxDepth=6 | Timeout=7s
+Sledgehammer yielded no finishers at this depth
+Finishers (origin): [llm:by simp, llm:by (metis length_0_conv)]
+[fill] Fill made no progress. Escalating to repair stage 1...
+lemma "length xs = 0 --> xs = [x]"
+proof -
+  have f1: "xs ≠ []"
+    by (simp add: not_less)
+  from f1 have f2: "xs ≠ []" "length xs = 0"
+    using length_0_imp Nil.prems
+    sorry
+  show ?thesis
+    using f2
+    sorry
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 63.707
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: (n::nat) < n
+
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+lemma "(n::nat) < n"
+proof -
+  have "n ≠ 0" by simp
+  moreover have "n ≤ n - 1" unfolding less_eq_nat_def by auto
+  ultimately show ?thesis by (metis not_le)
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 75.821
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: (n::nat) + 1 = n
+
+
+TIMEOUT: subprocess exceeded 90 seconds
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 90.008
+
+======================================================================
+SYSTEM: final_integrated
+DATASET: dataset3_robustness_negative_controls
+EXPECTED: invalid
+GOAL: length (xs @ ys) = length xs
+
+Loop <_UnixSelectorEventLoop running=False closed=True debug=False> that handles pid 32938 is closed
+[integration] Part 2 planner.driver is running.
+[integration] Calling Part 3 repair helper: planner.repair._get_stepwise_prover().
+[integration] That helper calls Part 1 prover CLI: python -m prover.cli.
+[planner] Direct prover fast path failed; falling back to outline/fill: UnboundLocalError: cannot access local variable 'full_direct' where it is not associated with a value
+lemma "length (xs @ ys) = length xs"
+proof -
+  have "length [] @ ys = length []"
+    by simp
+  moreover
+  have "length (xs @ []) = length xs"
+    by simp
+  ultimately show ?thesis
+    by blast
+qed
+
+ACTUAL: failed_or_unproved
+CORRECT: yes
+RUNTIME_SEC: 71.98
+

@@ -1,0 +1,14 @@
+SUMMARY FOR baseline
+============================================================
+Total goals: 72
+Proved: 0
+Correct behaviour: 11/72 (15.28%)
+Valid goals proved: 0/61
+Invalid goals correctly rejected: 11/11
+Average runtime: 21.167 sec
+
+PER DATASET
+------------------------------------------------------------
+dataset1_logic_course: proved=0/25, correct=0/25, avg_runtime=19.762s
+dataset2_isabelle_main_library: proved=0/24, correct=0/24, avg_runtime=20.862s
+dataset3_robustness_negative_controls: proved=0/23, correct=11/23, avg_runtime=23.014s
